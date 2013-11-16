@@ -24,3 +24,4 @@ $autoload->register();
 
 // lime
 include $configuration->getSymfonyLibDir().'/vendor/lime/lime.php';
+include $_test_dir . '/lib/AbstractLimeTest.class.php';

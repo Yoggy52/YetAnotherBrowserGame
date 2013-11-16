@@ -6,7 +6,7 @@ class TileBean extends BaseBean
   
   protected $vertical_position;
   
-  public function __construct($horizontal, $vertical)
+  public function __construct($horizontal = 0, $vertical = 0)
   {
     $this
       ->setHorizontalPosition($horizontal)

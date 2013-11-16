@@ -1,0 +1,73 @@
+HEADER, FOOTER, MENU, ARTICLE, H1, H2, H3, H4, P, UL {
+  margin: 0px;
+  padding: 0px;
+}
+BODY {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0px;
+  padding: 10px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 200px;
+}
+/**
+ *   header & footer
+ */
+FOOTER,
+HEADER {
+  color: #B28F6B;
+}
+HEADER {
+  position: fixed;
+  top: 0px;
+  height: 80px;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  background-color: white;
+  border-bottom: solid 1px black;
+}
+HEADER H1 {
+  position: absolute;
+  bottom: 20px;
+  left: 224px;
+}
+FOOTER {
+  padding-left: 24px;
+}
+/**
+ *   menu
+ */
+MENU {
+  position: absolute;
+  left: 0px;
+  top: 80px;
+  width: 180px;
+  padding: 15px;
+  color: #A79685;
+  background-color: #F4EFE9;
+  -webkit-box-shadow: inset 0px 0px 8px 8px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px 0px 8px 8px rgba(255,255,255,1);
+  box-shadow: inset 0px 0px 8px 8px rgba(255,255,255,1);
+  min-height: 200px;  
+}
+MENU UL {
+  list-style: none;
+}
+/**
+ *   article
+ */
+ARTICLE {
+  background-color: #F4EFE9;
+  -webkit-box-shadow: inset 0px 0px 12px 12px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px 0px 12px 12px rgba(255,255,255,1);
+  box-shadow: inset 0px 0px 12px 12px rgba(255,255,255,1);  
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 24px;
+}
+ARTICLE P {
+  margin-bottom: 12px;
+  line-height: 140%;
+}

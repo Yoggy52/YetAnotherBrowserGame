@@ -23,5 +23,5 @@ $autoload->loadConfiguration(sfFinder::type('file')->name('autoload.yml')->in(ar
 $autoload->register();
 
 // lime
-include $configuration->getSymfonyLibDir().'/vendor/lime/lime.php';
-include $_test_dir . '/lib/AbstractLimeTest.class.php';
+require_once $configuration->getSymfonyLibDir().'/vendor/lime/lime.php';
+require_once $_test_dir . '/lib/AbstractLimeTest.class.php';

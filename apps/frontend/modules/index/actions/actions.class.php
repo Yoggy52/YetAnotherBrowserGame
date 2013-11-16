@@ -17,5 +17,6 @@ class indexActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->scenario = new ScenarioBean(10,10);
   }
 }

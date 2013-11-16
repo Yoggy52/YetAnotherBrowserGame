@@ -1,0 +1,24 @@
+.scenario {
+  border-collapse: collapse;
+}
+.scenario TH {
+  font-size: 60%;
+}
+.scenario .tile {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border: solid 1px black;
+}
+.scenario .tile:hover {
+  background-color: yellow;
+}
+.scenario .tile .coordinates {
+  display: block;
+  text-align: center;
+  font-size: 50%;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: default;
+}

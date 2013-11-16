@@ -4,19 +4,11 @@ require_once(dirname(__FILE__).'/../../../../bootstrap/unit.php');
 
 class DeepWaterTerrainTypeTest extends AbstractLimeTest
 {
-  public function test_terrainNameConst()
+  public function test_getName()
   {
-    $this->diag('DeepWaterTerrainType::TERRAIN_NAME');
-    $this->is('deep water', DeepWaterTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('DeepWaterTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('water.deep', DeepWaterTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('DeepWaterTerrainType::getName()');
+    $this->is('deep water', DeepWaterTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

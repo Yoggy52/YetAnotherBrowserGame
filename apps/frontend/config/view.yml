@@ -6,11 +6,11 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        Yet Another Web Browser Game
+    description:  Yet another web browser game
+    keywords:     browser game, game, strategy
+    language:     en
+    robots:       index, follow
 
   stylesheets:    [main.css, scenario.css]
 

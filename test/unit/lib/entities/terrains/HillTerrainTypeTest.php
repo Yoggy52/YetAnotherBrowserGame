@@ -6,17 +6,9 @@ class HillTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('HillTerrainType::TERRAIN_NAME');
-    $this->is('hill', HillTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('HillTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('hill', HillTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('HillTerrainType::getName()');
+    $this->is('hill', HillTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

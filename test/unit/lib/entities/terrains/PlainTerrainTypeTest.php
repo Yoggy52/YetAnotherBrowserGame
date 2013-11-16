@@ -6,17 +6,9 @@ class PlainTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('PlainTerrainType::TERRAIN_NAME');
-    $this->is('plain', PlainTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('PlainTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('plain', PlainTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('PlainTerrainType::getName()');
+    $this->is('plain', PlainTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

@@ -6,17 +6,9 @@ class JungleTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('JungleTerrainType::TERRAIN_NAME');
-    $this->is('jungle', JungleTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('JungleTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('jungle', JungleTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('JungleTerrainType::getName()');
+    $this->is('jungle', JungleTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

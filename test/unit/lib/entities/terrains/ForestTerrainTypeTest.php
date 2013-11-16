@@ -6,17 +6,9 @@ class ForestTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('ForestTerrainType::TERRAIN_NAME');
-    $this->is('forest', ForestTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('ForestTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('forest', ForestTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('ForestTerrainType::test_getName()');
+    $this->is('forest', ForestTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

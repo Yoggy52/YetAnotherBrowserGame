@@ -6,17 +6,9 @@ class SwampTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('SwampTerrainType::TERRAIN_NAME');
-    $this->is('swamp', SwampTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('SwampTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('swamp', SwampTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('SwampTerrainType::getName()');
+    $this->is('swamp', SwampTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

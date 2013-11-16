@@ -6,17 +6,9 @@ class MountainTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('MountainTerrainType::TERRAIN_NAME');
-    $this->is('mountain', MountainTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('MountainTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('mountain', MountainTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('MountainTerrainType::getName()');
+    $this->is('mountain', MountainTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

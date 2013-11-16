@@ -6,17 +6,9 @@ class SnowTerrainTypeTest extends AbstractLimeTest
 {
   public function test_terrainNameConst()
   {
-    $this->diag('SnowTerrainType::TERRAIN_NAME');
-    $this->is('snow', SnowTerrainType::TERRAIN_NAME, 
-      'const TERRAIN_NAME was properly defined');
-  }
-  
-  public function test_terrainCssClass()
-  {
-    $this->diag('SnowTerrainType::TERRAIN_CSS_CLASS');
-
-    $this->is('snow', SnowTerrainType::TERRAIN_CSS_CLASS, 
-      'const TERRAIN_CSS_CLASS was properly defined');
+    $this->diag('SnowTerrainType::getName()');
+    $this->is('snow', SnowTerrainType::getName(), 
+      'getName() returns the terrain name');
   }
   
   public function test_getCssClass()

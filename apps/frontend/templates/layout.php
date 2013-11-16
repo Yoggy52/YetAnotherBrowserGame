@@ -14,9 +14,7 @@
     </header>
     <menu>
       <h1>Menu</h1>
-      <ul>
-        <li>index</li>
-      </ul>
+      <?php include_partial('index/menu') ?>
     </menu>
     <article>
       <?php echo $sf_content ?>

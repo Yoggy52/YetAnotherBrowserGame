@@ -2,6 +2,8 @@
 
 class AbstractTerrainTypeEntity
 {
+  protected static $_instances = array();
+  
   /**
    * this terrain`s name
    * @var string
@@ -23,7 +25,26 @@ class AbstractTerrainTypeEntity
   /**
    * no need to construct these entities
    */
-  final protected function __construct() {}
+  protected final function __construct() {}
+  
+  protected final function __clone() {}
+
+  public static final function getInstance()
+  {
+      $calledClass = get_called_class();
+
+      if (!isset($instances[$calledClass]))
+      {
+          $instances[$calledClass] = new $calledClass();
+      }
+
+      return $instances[$calledClass];
+  }
+  
+  public static function getName()
+  {
+    return static::TERRAIN_NAME;
+  }
   
   /**
    * @return string The combined classed defined for the base terrain and the terrain itself

@@ -120,6 +120,18 @@ class ScenarioBeanTest extends AbstractLimeTest
     $this->is_deeply($tile, $scenario->getTile(5,5), 'getTile() returned the right tile');
   }
 
+  public function test_addTileUpdatesTileParentScenario()
+  {
+    $this->diag('$scenario->addTile(new TileBean(5,5)) // updates the tile parent scenario');
+    
+    $scenario = new ScenarioBean(10,10);
+    $tile = new TileBean(5,5);
+    
+    $scenario->addTile($tile);
+
+    $this->is_deeply($scenario, $tile->getParentScenario(), 'addTile() updates the tile\'s parent scenario');
+  }
+
   public function test_addTileThrowsExceptionWhenPositionIfOccupied()
   {
     $this->diag('$scenario->addTile(new TileBean(5,5), $overwrite = false) // to already occupied location');

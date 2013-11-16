@@ -80,5 +80,20 @@ class TileBeanTest extends AbstractLimeTest
     }
     $this->is(0, $tile->getVerticalPosition(), 'getVerticalPosition() still returns 0');
   }
+  
+  public function test_addTileUpdatesTileParentScenario()
+  {
+    $this->diag('$tile->setParentScenario(new ScenarioBean())');
+    
+    $scenario = new ScenarioBean(10,10);
+    $tile = new TileBean(5,5);
+    $this->is(null, $tile->getParentScenario(), 'getParentScenario() returns null');
+    
+    $tile->setParentScenario($scenario);
+
+    $this->is_deeply($scenario, $tile->getParentScenario(), 'setParentScenario() updates the tile\'s parent scenario');
+    $this->is(true, $tile === $scenario->getTile(5,5), 'setParentScenario() has added the tile to the scenario');
+  }
+  
 }
 TileBeanTest::run();

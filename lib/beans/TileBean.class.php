@@ -6,12 +6,29 @@ class TileBean extends BaseBean
   
   protected $vertical_position;
   
+  protected $parent_scenario;
+  
   public function __construct($horizontal = 0, $vertical = 0)
   {
     $this
       ->setHorizontalPosition($horizontal)
       ->setVerticalPosition($vertical)
     ;
+  }
+  
+  public function setParentScenario(ScenarioBean $scenario)
+  {
+    if ($this->parent_scenario !== $scenario) {
+      $this->parent_scenario = $scenario;
+      $scenario->addTile($this, $overwrite = true);
+    }
+    
+    return $scenario;
+  }
+  
+  public function getParentScenario()
+  {
+    return $this->parent_scenario;
   }
   
   /**

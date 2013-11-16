@@ -112,6 +112,7 @@ class ScenarioBean extends BaseBean
     }
     
     $this->tiles[$tile->getHorizontalPosition()][$tile->getVerticalPosition()] = $tile;
+    $tile->setParentScenario($this);
     
     return $this;
   }

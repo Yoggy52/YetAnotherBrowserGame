@@ -16,7 +16,7 @@ class SnowTerrainTypeTest extends AbstractLimeTest
     $this->diag('SnowTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.snow", SnowTerrainType::getCssClass(),
+    $this->is("{$base_class} snow", SnowTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

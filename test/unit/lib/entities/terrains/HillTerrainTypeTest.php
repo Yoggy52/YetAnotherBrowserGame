@@ -16,7 +16,7 @@ class HillTerrainTypeTest extends AbstractLimeTest
     $this->diag('HillTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.hill", HillTerrainType::getCssClass(),
+    $this->is("{$base_class} hill", HillTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

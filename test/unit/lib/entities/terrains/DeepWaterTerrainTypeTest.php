@@ -16,7 +16,7 @@ class DeepWaterTerrainTypeTest extends AbstractLimeTest
     $this->diag('DeepWaterTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.water.deep", DeepWaterTerrainType::getCssClass(),
+    $this->is("{$base_class} deep water", DeepWaterTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

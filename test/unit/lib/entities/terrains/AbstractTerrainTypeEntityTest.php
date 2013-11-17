@@ -34,11 +34,11 @@ class AbstractTerrainTypeEntityTest extends AbstractLimeTest
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
     
-    $this->is(".{$base_class}.foo_css", FooTerrainType::getCssClass(),
+    $this->is("{$base_class} foo_css", FooTerrainType::getCssClass(),
       'FooTerrainType::getCssClass() static call returns the right css class');
 
     $foo = FooTerrainType::getInstance();
-    $this->is(".{$base_class}.foo_css", $foo->getCssClass(),
+    $this->is("{$base_class} foo_css", $foo->getCssClass(),
       '$foo->getCssClass() non static call returns the right css class');
   }
 }

@@ -20,7 +20,7 @@ class TileBeanTest extends AbstractLimeTest
   {
     $this->diag('$tile = new TileBean(20,30, \'plain\')');
     
-    $tile = new TileBean(20, 30, 'plain');
+    $tile = new TileBean(20, 30, PlainTerrainType::getName());
     
     $this->is(20, $tile->getHorizontalPosition(), 'getHorizontalPosition() returns 20');
     $this->is(30, $tile->getVerticalPosition(), 'getVerticalPosition() returns 30');
@@ -104,7 +104,7 @@ class TileBeanTest extends AbstractLimeTest
     $this->diag('$this->setTerrainType(\'forest\')');
     
     $tile = new TileBean();
-    $tile->setTerrainType('forest');
+    $tile->setTerrainType(ForestTerrainType::getName());
     
     $this->isa_ok($tile->getTerrainType(), 'ForestTerrainType', 
       'getTerrainType() returns ForestTerrainType instance');

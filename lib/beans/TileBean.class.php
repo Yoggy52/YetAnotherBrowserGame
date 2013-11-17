@@ -10,8 +10,6 @@ class TileBean extends BaseBean
   
   protected $terrain_type;
   
-  protected static $terrain_types;
-  
   public function __construct($horizontal = 0, $vertical = 0, $terrain_type = 'shallow water')
   {
     $this
@@ -85,7 +83,7 @@ class TileBean extends BaseBean
   public function setTerrainType($terrain_type)
   {
     if (false == $terrain_type instanceof AbstractTerrainTypeEntity) {
-      $terrain_types = static::getTerrainTypes();
+      $terrain_types = AbstractTerrainTypeEntity::getTerrainTypes();
       if (array_key_exists($terrain_type, $terrain_types)) {
         $terrain_type = $terrain_types[$terrain_type];
       } else {
@@ -102,25 +100,4 @@ class TileBean extends BaseBean
   {
     return $this->terrain_type;
   }
-  
-  protected static function getTerrainTypes()
-  {
-    if (null === static::$terrain_types) {
-      static::$terrain_types = array(
-        DeepWaterTerrainType::getName()     => DeepWaterTerrainType::getInstance(),
-        DesertTerrainType::getName()        => DesertTerrainType::getInstance(),
-        ForestTerrainType::getName()        => ForestTerrainType::getInstance(),
-        GrasslandTerrainType::getName()     => GrasslandTerrainType::getInstance(),
-        HillTerrainType::getName()          => HillTerrainType::getInstance(),
-        JungleTerrainType::getName()        => JungleTerrainType::getInstance(),
-        MountainTerrainType::getName()      => MountainTerrainType::getInstance(),
-        PlainTerrainType::getName()         => PlainTerrainType::getInstance(),
-        ShallowWaterTerrainType::getName()  => ShallowWaterTerrainType::getInstance(),
-        SnowTerrainType::getName()          => SnowTerrainType::getInstance(),
-        SwampTerrainType::getName()         => SwampTerrainType::getInstance(),
-      );
-    }
-    return static::$terrain_types;    
-  }
-  
 }

@@ -16,7 +16,7 @@ class DesertTerrainTypeTest extends AbstractLimeTest
     $this->diag('DesertTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.desert", DesertTerrainType::getCssClass(),
+    $this->is("{$base_class} desert", DesertTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

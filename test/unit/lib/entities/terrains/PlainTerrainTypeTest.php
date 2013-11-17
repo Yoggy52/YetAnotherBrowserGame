@@ -16,7 +16,7 @@ class PlainTerrainTypeTest extends AbstractLimeTest
     $this->diag('PlainTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.plain", PlainTerrainType::getCssClass(),
+    $this->is("{$base_class} plain", PlainTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

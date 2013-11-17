@@ -16,7 +16,7 @@ class MountainTerrainTypeTest extends AbstractLimeTest
     $this->diag('MountainTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.mountain", MountainTerrainType::getCssClass(),
+    $this->is("{$base_class} mountain", MountainTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

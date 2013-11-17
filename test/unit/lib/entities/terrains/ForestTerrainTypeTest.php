@@ -16,7 +16,7 @@ class ForestTerrainTypeTest extends AbstractLimeTest
     $this->diag('ForestTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.forest", ForestTerrainType::getCssClass(),
+    $this->is("{$base_class} forest", ForestTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

@@ -16,7 +16,7 @@ class SwampTerrainTypeTest extends AbstractLimeTest
     $this->diag('SwampTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.swamp", SwampTerrainType::getCssClass(),
+    $this->is("{$base_class} swamp", SwampTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

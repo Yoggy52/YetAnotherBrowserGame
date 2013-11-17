@@ -16,7 +16,7 @@ class GrasslandTerrainTypeTest extends AbstractLimeTest
     $this->diag('GrasslandTerrainType::getCssClass()');
 
     $base_class = AbstractTerrainTypeEntity::BASE_TERRAIN_CSS_CLASS;
-    $this->is(".{$base_class}.grass", GrasslandTerrainType::getCssClass(),
+    $this->is("{$base_class} grass", GrasslandTerrainType::getCssClass(),
       'getCssClass() returns the right css class');
   }
 }

@@ -4,5 +4,5 @@ class DeepWaterTerrainType extends AbstractTerrainTypeEntity
 {
   const TERRAIN_NAME = 'deep water';
   
-  const TERRAIN_CSS_CLASS = 'water.deep';
+  const TERRAIN_CSS_CLASS = 'deep water';
 }

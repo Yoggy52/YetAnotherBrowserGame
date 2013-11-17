@@ -1,8 +1,10 @@
 <?php
 
-class AbstractTerrainTypeEntity
+abstract class AbstractTerrainTypeEntity
 {
   protected static $_instances = array();
+  
+  protected static $terrain_types;
   
   /**
    * this terrain`s name
@@ -14,7 +16,7 @@ class AbstractTerrainTypeEntity
    * the css class applied to *ALL* terrain types
    * @var string
    */
-  const BASE_TERRAIN_CSS_CLASS = 'terrain';
+  const BASE_TERRAIN_CSS_CLASS = 'tile';
   
   /**
    * the css class applied only to this terrain
@@ -51,6 +53,26 @@ class AbstractTerrainTypeEntity
    */
   public static function getCssClass()
   {
-    return sprintf('.%s.%s', static::BASE_TERRAIN_CSS_CLASS, static::TERRAIN_CSS_CLASS);
-  } 
+    return sprintf('%s %s', static::BASE_TERRAIN_CSS_CLASS, static::TERRAIN_CSS_CLASS);
+  }
+  
+  public static function getTerrainTypes()
+  {
+    if (null === static::$terrain_types) {
+      static::$terrain_types = array(
+        DeepWaterTerrainType::getName()     => DeepWaterTerrainType::getInstance(),
+        DesertTerrainType::getName()        => DesertTerrainType::getInstance(),
+        ForestTerrainType::getName()        => ForestTerrainType::getInstance(),
+        GrasslandTerrainType::getName()     => GrasslandTerrainType::getInstance(),
+        HillTerrainType::getName()          => HillTerrainType::getInstance(),
+        JungleTerrainType::getName()        => JungleTerrainType::getInstance(),
+        MountainTerrainType::getName()      => MountainTerrainType::getInstance(),
+        PlainTerrainType::getName()         => PlainTerrainType::getInstance(),
+        ShallowWaterTerrainType::getName()  => ShallowWaterTerrainType::getInstance(),
+        SnowTerrainType::getName()          => SnowTerrainType::getInstance(),
+        SwampTerrainType::getName()         => SwampTerrainType::getInstance(),
+      );
+    }
+    return static::$terrain_types;    
+  }   
 }
